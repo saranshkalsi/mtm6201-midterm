@@ -1,0 +1,374 @@
+/* Note for Professor */
+
+/* I am having trouble in setting up layout in Grid because I thought I will change my whole Divs into Grid later on and I failed. Therefore I will implement Grid and Flex mix on About page */
+
+/* I will be adding Animations on Homepage */
+
+/* Used flexbox on home page for Navbar , Cards and almost every div
+
+*/
+/* Variable for all colors */
+:root {
+    --font: #201c1c;
+    --red: #ea3a3a;
+    --blue: #4758d6;
+    --white: #eeeded;
+    --yellow: #e1811f;
+  }
+
+/* font for headers */
+
+  h1,h2,h3,h4,h5,h6,a,li {
+    font-family: 'Outfit';
+  }
+/* font for paragraphs */
+  p {
+    font-family: 'Tilt Neon';
+  }
+/* Restting all anchor styling */
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+main {
+    width: 90%;
+    margin: 50px auto;
+    border: 1px solid black;
+}
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+font-family: 'Outfit', sans-serif;
+font-family: 'Tilt Neon', cursive;
+box-sizing: border-box;
+background-color: var(--blue);
+width: 100vw;
+
+}
+/* anchor styling */
+a:hover {
+    background-color: var(--yellow);
+}
+
+a:active {
+    background-color: var(--red);
+    box-shadow: 0 5px var(--blue);
+    transform: translateY(4px);
+  }
+
+  /* Button styling */
+  .button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/* navbar with css flexbox starts here*/
+.nav-list {
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ 
+ background-color: var(--white);
+ height: 5rem;
+ width: 100%;
+ font-size: 2rem;
+}
+
+ @media only screen and (max-width: 600px) {
+    .nav-list {
+      flex-direction: column;
+      height: fit-content;
+    }
+    .logo {
+        margin-left: 50%;
+    }
+
+    body {
+        background-color: var(--white);
+    }
+
+    .flex-cards {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+   
+
+  
+    
+   
+.banner-text {
+    font-size: 0.02rem;
+}
+  } 
+
+.nav-item {
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 2rem;
+    
+}
+
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+/* navbar ends here */
+
+/* Main content layout with grid */
+
+/* Designing of home banner */
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    background-image: url('../images/home-banner-1.jpg');
+    height: 100vh;
+    background-position: top center;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+}
+
+.banner-text { 
+
+padding-top: 5rem;
+width: 40%;
+height: 100%;
+font-size: 1.5rem;
+margin-left: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:flex-start
+}
+.banner-text p {
+    padding: 5px 0 50px 0;
+    padding-left: 5%;
+}
+
+.primary-btn {
+
+width: 30%;
+height: 5%;
+background-color: var(--red);
+border: none;
+color: var(--white);
+font-size: 1.2rem;
+border-radius: 30px;
+}
+
+.banner-text h1 {
+    /* margin: 0 auto; */
+    padding-bottom: 3rem;
+    padding-left: 5%;
+    
+}
+
+/* .banner-text p {
+    
+} */
+.banner img {
+    display: none;
+}
+
+/* Second home banner for intro */
+.banner2 {
+    background-image: url('../images/home-banner-2.jpg');
+    height: 100vh;
+    background-position: top center;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+}
+.banner2 img {
+    display: none;
+}
+.banner2 h1 {
+
+    padding-bottom: 3rem;
+    padding-right: 5%;
+
+
+}
+
+.banner2 p {
+    padding: 5px 0 50px 0;
+
+    
+}
+
+.banner-text-right {
+    
+    text-align:justify;
+    padding-top: 5rem;
+    width: 40%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Text before service */
+
+.service-intro {
+
+font-size: 1.2rem;
+font-family: 'Tilt Neon';
+color: var(--white);
+text-align: center;
+
+
+
+
+}
+
+/* cards section with flexbox */
+
+.cards {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--red);
+    font-family: 'Tilt Neon';
+    margin-top: 50px;
+    width: 100%;
+    
+}
+.card p {
+    padding-bottom: 1.25rem;
+}
+.cards h2 , .special-text  {
+    color: var(--white);
+    padding-bottom: 2rem;
+}
+
+.flex-cards {
+    display: flex;
+    
+    /* width: 25%; */
+    
+    
+    justify-content: space-around;
+    height: 45vh;
+    /* flex-wrap: wrap; */
+    align-items: center; 
+
+} 
+
+.card {
+    background-color: var(--white);
+    /* height: 100%; */
+    width: 25%;
+    border: 1px solid var(--white);
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    border-radius: 80px;
+    /* flex-wrap: wrap; */
+}
+
+/* Secondary Button styling */
+
+
+.secondary-btn {
+
+width: 10rem;
+height: 2.5rem;
+background-color: var(--blue);
+color: var(--white);
+font-family: 'Tilt Neon';
+box-shadow: none;
+border: none;
+border-radius: 10px;
+font-size: 1.5rem;
+}
+
+
+/* Subscribe List */
+.connect {
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    margin: 100px 0 10px 0;
+    background-color: var(--white);
+    color: var(--yellow);
+}   
+
+.connect h3 {
+    font-size: 2rem;
+    align-self: center;
+}
+.connect input{
+    width: 30%;
+    height: 40%;
+    align-self: center;
+}
+
+
+.con-btn {
+    align-self: center;
+}
+
+
+
+
+
+
+/* footer starts here */
+
+.footer {
+    text-decoration: none;
+    list-style-type: none;
+    /* margin-right: 2rem; */
+    background-color: var(--red);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 10vh;
+    align-items: center;
+    
+}
+
+.footer li {
+    list-style: none;
+    font-size: 2rem;
+   
+}
+
+
+.footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+input::placeholder {
+    color: var(--font);
+    font-size: larger;
+    text-align: center;
+    text-transform: uppercase;
+    }
+/* Footer ends here */
+
+

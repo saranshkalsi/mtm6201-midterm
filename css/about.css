@@ -1,0 +1,212 @@
+/* Variable for all colors */
+:root {
+    --font: #201c1c;
+    --red: #ea3a3a;
+    --blue: #4758d6;
+    --white: #eeeded;
+    --yellow: #e1811f;
+  }
+
+  /* font for headers */
+
+  h1,h2,h3,h4,h5,h6,a,li {
+    font-family: 'Outfit';
+  }
+/* font for paragraphs */
+  p {
+    font-family: 'Tilt Neon';
+  }
+/* Restting all anchor styling */
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* anchor styling */
+a:hover {
+    background-color: var(--yellow);
+}
+
+a:active {
+    background-color: var(--red);
+    box-shadow: 0 5px var(--blue);
+    transform: translateY(4px);
+  }
+
+  /* Button styling */
+  .button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* navbar with css flexbox starts here*/
+.nav-list {
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ 
+ background-color: var(--white);
+ height: 5rem;
+ width: 100%;
+ font-size: 2rem;
+}
+
+ @media only screen and (max-width: 600px) {
+    .nav-list {
+      flex-direction: column;
+      height: fit-content;
+    }
+    .logo {
+        margin-left: 50%;
+    }
+
+    body {
+        background-color: var(--white);
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-areas:"nav"
+      "main"
+       "content1"
+       "content2"
+       "content3"
+       "footer";
+    }
+
+  } 
+
+  .nav-item {
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 2rem;
+    
+}
+
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+/* navbar ends here */
+/* Grid layout */
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr .8fr ;
+  grid-template-areas: " nav nav nav"
+  " main main main"
+  "content1 content2 content3"
+  "footer footer footer";
+  grid-gap: 0.2rem;
+}
+
+nav {
+  background-color: #3e8e41;
+  grid-area: nav;
+}
+main {
+  background-color: var(--white);
+  grid-area: main;
+
+}
+#sidebar {
+  background-color: #666;
+  grid-area: sidebar;
+}
+
+#content1 {
+  background-color: #e1811f;
+  grid-area: content1;
+}
+
+#content2 {
+  background-color: #ea3a3a;
+  grid-area: content2;
+}
+
+#content3 {
+  background-color: aqua;
+  grid-area: content3;
+}
+
+/* main banner css */
+
+.main-container {
+  display: flex;
+  
+  font-size: 2rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.main-text {
+  width: 50%;
+  
+
+}
+
+.main-img {
+  
+width: 100%;
+}
+
+/* Types of shoes */
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+/* footer starts here */
+
+footer {
+  grid-area: footer;
+}
+.footer {
+    text-decoration: none;
+    list-style-type: none;
+    /* margin-right: 2rem; */
+    background-color: var(--red);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 10vh;
+    align-items: center;
+    
+}
+
+.footer li {
+    list-style: none;
+    font-size: 2rem;
+   
+}
+
+
+.footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+/* Footer ends here */
