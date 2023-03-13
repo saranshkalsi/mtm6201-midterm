@@ -21,7 +21,7 @@
 </head>
 <body>
      <!--Navbar of whole website  -->
-     <nav>            
+     <nav role="navigation">            
         <ul class="nav-list">
                 <li class="nav-item">
                 <img src="images/kw.png" alt="logo" class="logo"></li>
@@ -36,7 +36,7 @@
 
 
 
-<div class="header-form">
+<div class="header-form" role="article">
     <h1>Welcome to our contact page</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sed natus aut qui explicabo quo?
     </p>
@@ -50,13 +50,13 @@
         <i class="fas fa-at"></i>
         <i class="fas fa-mail-bulk"></i>
       </div>
-      <form action="/">
+      <form action="/" role="form" aria-label="Contact information">
         <h1>Contact Us</h1>
         <div class="info">
-          <input class="fname" type="text" name="name" placeholder="Full name">
-          <input type="text" name="name" placeholder="Email">
-          <input type="text" name="name" placeholder="Phone number">
-          <input type="text" name="name" placeholder="Website">
+          <input class="fname" type="text" name="name" placeholder="Full name" for="name">
+          <input type="text" name="name" placeholder="Email" for="email">
+          <input type="text" name="name" placeholder="Phone number" for="number">
+          <input type="text" name="name" placeholder="Website" for="message">
         </div>
         <p>Message</p>
         <div>
@@ -82,7 +82,7 @@
 
 
         <!-- Footer Content for all pages -->
-        <footer>
+        <footer role="contentinfo">
             <div class="footer">
                 <ul class="footer-items-1">
                     <li><a href="index.html">Home</a></li>
