@@ -21,6 +21,8 @@
   h1,h2,h3,h4,h5,h6,a,li {
     font-family: 'Outfit';
   }
+
+
 /* font for paragraphs */
   p {
     font-family: 'Tilt Neon';
@@ -52,7 +54,7 @@ width: 100vw;
 }
 /* anchor styling */
 a:hover {
-    background-color: var(--yellow);
+  background-color: var(--yellow);
 }
 
 a:active {

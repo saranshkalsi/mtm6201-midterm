@@ -11,7 +11,10 @@
 
   h1,h2,h3,h4,h5,h6,a,li {
     font-family: 'Outfit';
+
   }
+
+ 
 /* font for paragraphs */
   p {
     font-family: 'Tilt Neon';
@@ -150,6 +153,16 @@ main {
 
 /* main banner css */
 
+.fade-in-text {
+  /* font-family: 'Tilt Neon'; */
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .main-container {
   display: flex;
   
@@ -159,6 +172,11 @@ main {
   align-items: center;
   
 }
+
+
+
+
+
 .main-text {
   width: 50%;
   
